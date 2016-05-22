@@ -1,6 +1,6 @@
 {
   "name": "@paulavery/config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Load configuration from the environment",
   "main": "lib/index.js",
   "license": "BSD-3-Clause",
