@@ -1,1 +1,1 @@
-# @paulavery/module-template - A template for node modules
+# @paulavery/config - Load configuration from the environment
