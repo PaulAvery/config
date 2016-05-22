@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>@paulavery/config</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/css/deps/normalize.css">
+	<link rel="stylesheet" href="assets/css/deps/cayman.css">
+	<link rel="stylesheet" href="assets/css/highlight.css">
+	<link rel="stylesheet" href="assets/css/header.css">
+	<link rel="stylesheet" href="assets/css/menu.css">
+	<link rel="stylesheet" href="assets/css/docs.css">
+
+	<script src="assets/js/collapse.js"></script>
+	<script src="assets/ js/reload.js"></script>
+</head>
+<body class="collapsed">
+	<div class="page-wrap">
+		<section class="page-header placeholder">
+			<div><h1 class="project-name">@paulavery/config</h1></div>
+			<h2 class="project-tagline">Load configuration from the environment</h2>
+			<nav class="main-menu">
+				<ul>
+					<li><a href="./" class="active">Introduction</a></li>
+				</ul>
+			</nav>
+		</section>
+		<section class="page-header">
+			<div><h1 class="project-name">@paulavery/config</h1></div>
+			<h2 class="project-tagline">Load configuration from the environment</h2>
+			<nav class="main-menu">
+				<ul>
+					<li><a href="./" class="active">Introduction</a></li>
+				</ul>
+			</nav>
+		</section>
+		<div class="main-column">
+			<section class="main-content">
+				<h1>An environment config loader</h1>
+<p>This module allows you to easily load your apps configuration from environment variables.<br>
+You specify a default config object, and the module parses environment variables based on that objects structure and data types.</p>
+<p><strong>Setup:</strong></p>
+<pre class="editor editor-colors"><div class="line"><span class="text plain null-grammar"><span>import&nbsp;config&nbsp;from&nbsp;&#39;@paulavery/config&#39;;</span></span></div><div class="line"><span class="text plain null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="text plain null-grammar"><span>let&nbsp;settings&nbsp;=&nbsp;config(&#39;appName&#39;,&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>	serverUrl:&nbsp;&#39;</span><span class="markup underline link http hyperlink"><span>http://github.com/</span></span><span>&#39;,</span></span></div><div class="line"><span class="text plain null-grammar"><span>	mysql:&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>		db:&nbsp;&#39;app-name&#39;,</span></span></div><div class="line"><span class="text plain null-grammar"><span>		host:&nbsp;&#39;localhost&#39;,</span></span></div><div class="line"><span class="text plain null-grammar"><span>		port:&nbsp;3306,</span></span></div><div class="line"><span class="text plain null-grammar"><span>		user:&nbsp;&#39;root&#39;</span></span></div><div class="line"><span class="text plain null-grammar"><span>	}</span></span></div><div class="line"><span class="text plain null-grammar"><span>});</span></span></div></pre>
+<p><strong>Variables:</strong></p>
+<pre class="editor editor-colors"><div class="line"><span class="text plain null-grammar"><span>APPNAME_SERVERURL=&#39;</span><span class="markup underline link http hyperlink"><span>http://dev.github.com/</span></span><span>&#39;</span></span></div><div class="line"><span class="text plain null-grammar"><span>APPNAME_MYSQL_DB=app-name-dev</span></span></div><div class="line"><span class="text plain null-grammar"><span>APPNAME_MYSQL_PORT=2207</span></span></div></pre>
+<p><strong>Result:</strong></p>
+<pre class="editor editor-colors"><div class="line"><span class="text plain null-grammar"><span>{</span></span></div><div class="line"><span class="text plain null-grammar"><span>	serverUrl:&nbsp;&#39;</span><span class="markup underline link http hyperlink"><span>http://dev.github.com/</span></span><span>&#39;,</span></span></div><div class="line"><span class="text plain null-grammar"><span>	mysql:&nbsp;{</span></span></div><div class="line"><span class="text plain null-grammar"><span>		db:&nbsp;&#39;app-name-dev&#39;,</span></span></div><div class="line"><span class="text plain null-grammar"><span>		host:&nbsp;&#39;localhost&#39;,</span></span></div><div class="line"><span class="text plain null-grammar"><span>		port:&nbsp;2207,</span></span></div><div class="line"><span class="text plain null-grammar"><span>		user:&nbsp;&#39;root&#39;</span></span></div><div class="line"><span class="text plain null-grammar"><span>	}</span></span></div><div class="line"><span class="text plain null-grammar"><span>}</span></span></div></pre>
+<p>Supported datatypes are <code>string</code>, <code>number</code>, <code>boolean</code> and obviously <code>object</code>.</p>
+<p>To make specifying local configs easy, it also uses the <a href="https://www.npmjs.com/package/dotenv">dotenv</a> package to load a ‘.env’ file with environment variables.</p>
+
+			</section>
+		</div>
+	</div>
+	<footer class="site-footer">
+		<div>
+			<span class="site-footer-owner"><a href="">@paulavery/config</a> is maintained by <a href="https://github.com/PaulAvery/">Florian Albertz</a>.</span>
+			<span class="site-footer-credits">This page uses a modified version of the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+		</div>
+	</footer>
+</body>
+</html>
