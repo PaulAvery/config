@@ -1,1 +1,1 @@
-# @paulavery/config - Load configuration from the environment
+docs/src/index.md
